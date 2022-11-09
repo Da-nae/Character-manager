@@ -9,15 +9,16 @@ import axios from 'axios'
 * @returns {array} AllCharacters - an array filled with the entries of the database
 */
 
-  async function getAllCharacterAsync() {
-      const response = await axios.get('https://character-database.becode.xyz/characters');
+async function getAllCharacterAsync() {
+    const response = await axios.get('https://character-database.becode.xyz/characters');
 
-      let AllCharacters = response.data;
-      return AllCharacters;
-  }
+    const AllCharacters = response.data;
+    return AllCharacters;
+}
 
+const AllCards = async() => {
   let AllCards = await getAllCharacterAsync();
-  console.log(AllCards);
+}
 
 /** Fetch one of the characters in the database by its ID
 * @author Danaé Grosjean
@@ -34,9 +35,6 @@ import axios from 'axios'
     return characterById;
   }
 
-  let testId = await getCharacterByIdAsync();
-  console.log(testId);
-
 /** Fetch one of the characters in the database by its name
 * @author Danaé Grosjean
 * @param {string} value - NEED TO BE CHANGED - a name to test the function
@@ -44,7 +42,7 @@ import axios from 'axios'
 * @returns {array} return the card of a character already in the database
 */
 
-async function getCharacterByNameAsync() {
+async function getCharacterByName() {
   let value = "Spiderman";
   const response = await axios.get(`https://character-database.becode.xyz/characters?name=${value}`);
 
@@ -52,16 +50,13 @@ async function getCharacterByNameAsync() {
   return characterByName;
 }
 
-let testName = await getCharacterByNameAsync();
-console.log(testName);
-
 /** Display all characters in the main html file
 * @author Danaé Grosjean
 * @param {string} value - NEED TO BE CHANGED - a name to test the function
 * @returns {array} return in the DOM all the name, image and description of all the database characters, each in a different div
 */
 
-function displayAllCharactersAsync () {
+function displayAllCharacters () {
 
   for (let elem of AllCards) {
     let card = document.createElement('div');
@@ -91,6 +86,6 @@ function displayAllCharactersAsync () {
   }
 }
 
-displayAllCharactersAsync();
+displayAllCharacters();
 
 
