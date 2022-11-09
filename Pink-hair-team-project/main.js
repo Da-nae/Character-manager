@@ -8,17 +8,16 @@ import axios from 'axios'
 * @returns {array} AllCharacters - an array filled with the entries of the database
 */
 
-async function getAllCharacterAsync() {
-    const response = await axios.get('https://character-database.becode.xyz/characters');
+// async function getAllCharacterAsync() {
+//     const response = await axios.get('https://character-database.becode.xyz/characters');
 
-    const AllCharacters = response.data;
-    return AllCharacters;
-}
+//     const AllCharacters = response.data;
+//     return AllCharacters;
+// }
 
-const AllCards = async() => {
-  let AllCards = await getAllCharacterAsync();
-}
-
+// const AllCards = async() => {
+//   let AllCards = await getAllCharacterAsync();
+// }
 
 /** Fetch one of the characters in the database by its ID
 * @author Danaé Grosjean
@@ -58,9 +57,13 @@ async function getCharacterByName() {
 * @returns {array} return in the DOM all the name, image and description of all the database characters, each in a different div
 */
 
-function displayAllCharacters () {
+async function displayAllCharacters () {
 
-  for (let elem of AllCards) {
+    const response = await axios.get('https://character-database.becode.xyz/characters');
+
+    const AllCharacters = response.data;
+
+  for (let elem of AllCharacters) {
 
 // Creation of the div to host the card
     let card = document.createElement('div');
