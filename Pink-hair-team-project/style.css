@@ -59,7 +59,7 @@ h1  {
   margin: 1px;
 }
 
-.character_1{
+.character{
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -84,7 +84,7 @@ h1  {
 
 }
 
-.character_description{
+.character_infos{
   margin-bottom: 1em;
   font-size: 80%;
 }
