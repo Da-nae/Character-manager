@@ -83,3 +83,30 @@ function displayAllCharactersAsync () {
 
 displayAllCharactersAsync();
 
+/** Addition of a "more info" button
+* @author Danaé Grosjean
+* @param {string} value - NEED TO BE CHANGED - a name to test the function
+* @returns {} Creation of a button element in HTML to go to the single character page
+*/
+
+function moreInfo() {
+  let divs = document.querySelector('div');
+  let cards = Array.from(divs);
+
+  console.log(cards);
+
+  for (let elem of cards) {
+    let infoButton = document.createElement('a');
+    cards.appendChild(infoButton);
+    infoButton.textContent = "More info";
+    infoButton.setAttribute("href", link);
+    let linkText = document.createTextNode(`https://character-database.becode.xyz/characters?name=${elem.name}`);
+    infoButton.appendChild(linkText);
+
+    console.log(infoButton);
+  }
+}
+
+moreInfo();
+
+
