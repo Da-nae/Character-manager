@@ -66,23 +66,28 @@ function displayAllCharactersAsync () {
   for (let elem of AllCards) {
     let card = document.createElement('div');
     document.body.appendChild(card);
+    card.classList.add("character");
 
     let pic = document.createElement('img');
     card.appendChild(pic);
     pic.src = `data:image/gif;base64,${elem.image}`;
+    pic.classList.add("character_img");
 
     let title = document.createElement('h2');
     title.textContent = elem.name;
     card.appendChild(title);
+    title.classList.add("character_name");
 
     let infoShort = document.createElement('p');
     card.appendChild(infoShort);
     infoShort.textContent = elem.shortDescription;
+    infoShort.classList.add("character_infos");
 
     let infoButton = document.createElement('a');
     card.appendChild(infoButton);
     infoButton.textContent = "More info";
     infoButton.href = `https://character-database.becode.xyz/characters?name=${elem.name}`;
+    infoButton.classList.add("character_buttons");
   }
 }
 
