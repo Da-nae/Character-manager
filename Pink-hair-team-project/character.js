@@ -9,15 +9,16 @@ import axios from 'axios'
 * @returns {array} return the card of a character already in the database
 */
 
-async function getCharacterByNameAsync() {
-    let value = "Spiderman";
-    const response = await axios.get(`https://character-database.becode.xyz/characters?name=${value}`);
+async function getCharacterByIdAsync() {
+    let value = "301bc33c-62fe-4060-8047-45ca196019da";
+    const response = await axios.get(`https://character-database.becode.xyz/characters/${value}`);
 
-    let characterByName = response.data;
-    return characterByName;
+    let characterById = response.data;
+    return characterById;
 }
 
-let singleCharacter = await getCharacterByNameAsync();
+let singleCharacter = await getCharacterByIdAsync();
+console.log(singleCharacter);
 
 /** Display a single characters in the main html file
 * @author Danaé Grosjean
@@ -38,9 +39,9 @@ function displayCharacterAsync () {
         title.textContent = singleCharacter.name;
         card.appendChild(title);
     
-        let infoShort = document.createElement('p');
-        card.appendChild(infoShort);
-        infoShort.textContent = singleCharacter.shortDescription;
+        let infoLong = document.createElement('p');
+        card.appendChild(infoLong);
+        infoLong.textContent = singleCharacter.description;
 
 }
 
