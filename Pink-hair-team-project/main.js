@@ -119,6 +119,9 @@ async function displayAllCharacters () {
   addButton.textContent = "+";
   addButton.style.border = "2px solid red";
   addButton.style.borderRadius = "50%";
+
+
+
 }
 
 displayAllCharacters();
