@@ -64,8 +64,9 @@ async function displayAllCharacters () {
   for (let elem of AllCharacters) {
 
 // Creation of the div to host the card
+    let list = document.getElementById('list_character');
     let card = document.createElement('div');
-    document.body.appendChild(card);
+    list.appendChild(card);
     card.classList.add("character");
 
 // Adding the image of the character
@@ -115,10 +116,9 @@ async function displayAllCharacters () {
   let addButton = document.createElement('a');
   let article = document.querySelector('article');
   article.appendChild(addButton);
+  addButton.href = `../input.html`;
   addButton.classList.add("addition_button");
   addButton.textContent = "+";
-  addButton.style.border = "2px solid red";
-  addButton.style.borderRadius = "50%";
 }
 
 displayAllCharacters();
