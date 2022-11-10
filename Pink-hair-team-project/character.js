@@ -51,9 +51,9 @@ async function displayCharacterAsync() {
             const result = confirm("Are you sure you want to delete this character ?");
             if (result) {
                 await axios.delete(`https://character-database.becode.xyz/characters/${singleCharacter.id}`);
+                alert('Character has been successfully deleted'); 
+                window.location.replace("http://localhost:5174/");
             }
-            alert('Character has been successfully deleted'); 
-            window.location.replace("http://localhost:5174/");
         }
     });
 }
