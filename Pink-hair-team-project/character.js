@@ -4,13 +4,14 @@ import axios from 'axios'
 
 /** Fetch one of the characters in the database by its ID and display it in a single page
 * @author Danaé Grosjean
-* @param {string} value - NEED TO BE CHANGED - a name to test the function
 * @returns {array} return in the DOM all the name, image and description of all the database characters, each in a different div
 */
 
 async function displayCharacterAsync() {
 
-    let value = "bb9afad9-2120-4fba-9929-e450f1385cb1";
+    const urlParams = new URLSearchParams(window.location.search);
+    const value = urlParams.get('id');
+    
     const response = await axios.get(`https://character-database.becode.xyz/characters/${value}`);
 
     let singleCharacter = response.data;
