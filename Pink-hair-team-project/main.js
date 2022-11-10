@@ -90,7 +90,7 @@ async function displayAllCharacters () {
     let infoButton = document.createElement('a');
     card.appendChild(infoButton);
     infoButton.textContent = "More info";
-    infoButton.href = `https://character-database.becode.xyz/characters?name=${elem.name}`;
+    infoButton.href = `../character.html?id=${elem.id}`;
     infoButton.classList.add("character_buttons");
 
 //  Adding the delete button on the character card
@@ -100,6 +100,15 @@ async function displayAllCharacters () {
     delButton.classList.add("character_buttons");
     delButton.classList.add("delete_button");
 
+    delButton.addEventListener("click", async(e) => {
+      if(e.target.classList[1] == "delete_button"){
+          const result = confirm("Are you sure you want to delete this character ?");
+          if (result) {
+            console.log("deleted, yes!");
+            await axios.delete(`https://character-database.becode.xyz/characters/${elem.id}`);
+          }
+      }
+    });
   }
 }
 
