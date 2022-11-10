@@ -112,8 +112,13 @@ async function displayAllCharacters () {
   }
 
 // Button to add a new character
-
-
+  let addButton = document.createElement('a');
+  let article = document.querySelector('article');
+  article.appendChild(addButton);
+  addButton.classList.add("addition_button");
+  addButton.textContent = "+";
+  addButton.style.border = "2px solid red";
+  addButton.style.borderRadius = "50%";
 }
 
 displayAllCharacters();
