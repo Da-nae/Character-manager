@@ -11,7 +11,7 @@ async function displayCharacterAsync() {
 
     const urlParams = new URLSearchParams(window.location.search);
     const value = urlParams.get('id');
-    
+
     const response = await axios.get(`https://character-database.becode.xyz/characters/${value}`);
 
     let singleCharacter = response.data;
@@ -46,6 +46,23 @@ async function displayCharacterAsync() {
         infoButton.href = `https://character-database.becode.xyz/characters?name=${singleCharacter.name}`;
         infoButton.classList.add("character_buttons");
 
+//  Adding the delete button on the character card
+    let delButton = document.createElement('a');
+    card.appendChild(delButton);
+    delButton.textContent = "Delete";
+    delButton.classList.add("character_buttons");
+    delButton.classList.add("delete_button");
+
+    delButton.addEventListener("click", async(e) => {
+        if(e.target.classList[1] == "delete_button"){
+            const result = confirm("Are you sure you want to delete this character ?");
+            if (result) {
+                await axios.delete(`https://character-database.becode.xyz/characters/${singleCharacter.id}`);
+            }
+            alert('Character has been successfully deleted'); 
+            window.location.replace("http://localhost:5174/");
+        }
+    });
 }
 
 displayCharacterAsync();

@@ -110,6 +110,10 @@ async function displayAllCharacters () {
       }
     });
   }
+
+// Button to add a new character
+
+
 }
 
 displayAllCharacters();
