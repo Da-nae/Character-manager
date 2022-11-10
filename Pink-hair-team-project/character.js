@@ -39,13 +39,6 @@ async function displayCharacterAsync() {
         infoLong.textContent = singleCharacter.description;
         infoLong.classList.add("character_description");
 
-// Adding the button more info on the character
-        let infoButton = document.createElement('a');
-        card.appendChild(infoButton);
-        infoButton.textContent = "More info";
-        infoButton.href = `https://character-database.becode.xyz/characters?name=${singleCharacter.name}`;
-        infoButton.classList.add("character_buttons");
-
 //  Adding the delete button on the character card
     let delButton = document.createElement('a');
     card.appendChild(delButton);
