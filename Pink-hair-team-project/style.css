@@ -37,63 +37,78 @@ body {
   min-height: 100vh;
 }
 
-/* @media screen and (max-width: 411px) */
-h1  {
+@media screen and (max-width: 411px){
+    h1  {
       font-size: 150%;
       
     }
 
-.white_bar {
-  width: 100%;
-  height: 2.5px;
-  background-color: rgba(158, 188, 158, 0.495);
-}
+  .white_bar {
+    width: 100%;
+    height: 2.5px;
+    background-color: rgba(158, 188, 158, 0.495);
+  }
 
-.search {
-  border-collapse: initial;
-  color: rgba(188, 75, 81);
-  border-color: rgba(158, 188, 158, 0.495);
-  border-radius: 30px;
-  border-width: 2px;
-  border-style: solid;
-  margin: 1px;
-}
+  .search {
+    border-collapse: initial;
+    color: rgba(188, 75, 81);
+    border-color: rgba(158, 188, 158, 0.495);
+    border-radius: 30px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 1px;
+  }
 
-.character{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 30px;
-  border-style: solid;
-  border-color: rgba(158, 188, 158, 0.495);
-  border-collapse: initial;
-  border-width: 2px;
-  border-style: solid;
-  margin: auto;
-  width: 94%;
-  height: 100%;
-}
+  .character{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgba(158, 188, 158, 0.495);
+    border-collapse: initial;
+    border-width: 2px;
+    border-style: solid;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
 
-.character_img{
-  width: 70px;
-  height: 70px;
-  border-radius: 50px;
-}
+  .character_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+  }
 
-.character_name{
+  .character_name{
+
+  }
+
+  .character_infos{
+    margin-bottom: 1em;
+    font-size: 80%;
+  }
+
+  .character_buttons{
+    margin-bottom: 1em;
+
+  }
+  button{
+    border-collapse: initial;
+    color: white;
+    /* background-color: $darkBackground;
+    border-color: $globalFontColor;
+    font-family: $paragraphs-font; */
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 1px;
+  }
 
 }
-
-.character_infos{
-  margin-bottom: 1em;
-  font-size: 80%;
-}
-
-.character_buttons{
-  margin-bottom: 1em;
-  
-}
-button{
+.addition_button{
   border-collapse: initial;
   color: white;
   /* background-color: $darkBackground;
