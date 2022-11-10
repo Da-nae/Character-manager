@@ -64,8 +64,9 @@ async function displayAllCharacters () {
   for (let elem of AllCharacters) {
 
 // Creation of the div to host the card
+    let list = document.getElementById('list_character');
     let card = document.createElement('div');
-    document.body.appendChild(card);
+    list.appendChild(card);
     card.classList.add("character");
 
 // Adding the image of the character
