@@ -4,10 +4,9 @@ import axios from 'axios'
 
 /** Fetch all the characters in the database
 * @author Danaé Grosjean
-* @param {array ?} AllCharacters - host the response of the get demand on the data base
+* @param {array} AllCharacters - host the response of the get demand on the data base
 * @returns {array} AllCharacters - an array filled with the entries of the database
 */
-
 // async function getAllCharacterAsync() {
 //     const response = await axios.get('https://character-database.becode.xyz/characters');
 
@@ -16,7 +15,7 @@ import axios from 'axios'
 // }
 
 // const AllCards = async() => {
-//   let AllCards = await getAllCharacterAsync();
+//   return await getAllCharacterAsync();
 // }
 
 /** Fetch one of the characters in the database by its ID
@@ -53,7 +52,6 @@ async function getCharacterByName() {
 
 /** Display all characters in the main html file
 * @author Danaé Grosjean
-* @param {string} value - NEED TO BE CHANGED - a name to test the function
 * @returns {array} return in the DOM all the name, image and description of all the database characters, each in a different div
 */
 
@@ -94,6 +92,14 @@ async function displayAllCharacters () {
     infoButton.textContent = "More info";
     infoButton.href = `https://character-database.becode.xyz/characters?name=${elem.name}`;
     infoButton.classList.add("character_buttons");
+
+//  Adding the delete button on the character card
+    let delButton = document.createElement('a');
+    card.appendChild(delButton);
+    delButton.textContent = "Delete";
+    delButton.classList.add("character_buttons");
+    delButton.classList.add("delete_button");
+
   }
 }
 
