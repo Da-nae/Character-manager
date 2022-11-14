@@ -39,7 +39,7 @@ displayCharacterAsync();
 // Update the data :
 async function inputCharacterAsync() {
     
-    if(document.querySelector("input[type=file]").files.length == 0) {
+    if(document.querySelector("input[type=file]").files.length === 0) {
         const urlParams = new URLSearchParams(window.location.search);
         const value = urlParams.get('id');
         let characterName = document.querySelector('#characterName').value;
@@ -56,6 +56,8 @@ async function inputCharacterAsync() {
 
             let data = response.data;
             console.log(data);
+            console.log("your if works, Dan");
+            window.location.replace("./index.html");
             
     } else {
         const urlParams = new URLSearchParams(window.location.search);
@@ -75,6 +77,7 @@ async function inputCharacterAsync() {
 
             let data = response.data;
             console.log(data);
+            window.location.replace("./index.html");
     }
 }
 

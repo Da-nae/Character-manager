@@ -46,6 +46,7 @@ submit.addEventListener("click", async() => {
             } else {
                 alert("Congrats ! It's added !");
                 await inputCharacterAsync();
+                window.location.replace("./index.html");
             }
         }
 });

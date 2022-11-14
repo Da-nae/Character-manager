@@ -52,7 +52,7 @@ async function displayCharacterAsync() {
             if (result) {
                 await axios.delete(`https://character-database.becode.xyz/characters/${singleCharacter.id}`);
                 alert('Character has been successfully deleted'); 
-                window.location.replace("http://localhost:5174/");
+                window.location.replace("./index.html");
             }
         }
     });
