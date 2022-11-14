@@ -63,7 +63,7 @@ async function displayCharacterAsync() {
     modButton.textContent = "Modify";
     modButton.classList.add("character_buttons");
     modButton.classList.add("modify_button");
-    modButton.href = `../modify.html`;
+    modButton.href = `../modify.html?id=${value}`;
 }
 
 displayCharacterAsync();

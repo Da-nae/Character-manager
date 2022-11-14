@@ -18,10 +18,8 @@ let image = document.querySelector("input[type=file]").addEventListener("change"
 // Add the content of the selected character :
 async function displayCharacterAsync() {
 
-    // const urlParams = new URLSearchParams(window.location.search);
-    // const value = urlParams.get('id');
-
-    let value = "28455ab1-30f2-4c61-938f-b4ad6eb63a35";
+    const urlParams = new URLSearchParams(window.location.search);
+    const value = urlParams.get('id');
 
     const response = await axios.get(`https://character-database.becode.xyz/characters/${value}`);
 
@@ -40,22 +38,44 @@ displayCharacterAsync();
 
 // Update the data :
 async function inputCharacterAsync() {
+    
+    if(document.querySelector("input[type=file]").files.length == 0) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const value = urlParams.get('id');
+        let characterName = document.querySelector('#characterName').value;
+        let shortDescription = document.querySelector('#shortDescription').value;
+        let Description = document.querySelector('#Description').value;
+        
+            let updatedChar = { 
+                name: characterName, 
+                shortDescription: shortDescription,
+                description: Description,
+            };
+        
+            let response = await axios.put(`https://character-database.becode.xyz/characters/${value}`, updatedChar);
 
-    let characterName = document.querySelector('#characterName').value;
-    let shortDescription = document.querySelector('#shortDescription').value;
-    let Description = document.querySelector('#Description').value;
-    
-        let newChar = { 
-            name: characterName, 
-            shortDescription: shortDescription,
-            description: Description,
-            image: image
-        };
-    
-        let response = await axios.post('https://character-database.becode.xyz/characters', newChar);
-    
-        let data = response.data;
-        console.log(data);
+            let data = response.data;
+            console.log(data);
+            
+    } else {
+        const urlParams = new URLSearchParams(window.location.search);
+        const value = urlParams.get('id');
+        let characterName = document.querySelector('#characterName').value;
+        let shortDescription = document.querySelector('#shortDescription').value;
+        let Description = document.querySelector('#Description').value;
+        
+            let updatedChar = { 
+                name: characterName, 
+                shortDescription: shortDescription,
+                description: Description,
+                image: image
+            };
+        
+            let response = await axios.put(`https://character-database.becode.xyz/characters/${value}`, updatedChar);
+
+            let data = response.data;
+            console.log(data);
+    }
 }
 
 // Function to submit the data : 
