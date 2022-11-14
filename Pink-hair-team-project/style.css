@@ -12,7 +12,7 @@
   /*color: rgba(255, 255, 255, 0.87);*/
   color: rgba(188, 75, 81);
  /* background-color: rgba(255, 207, 210, 0.952);*/
-  background-image: linear-gradient(to right, #ee9ca7 , #ffdde1);
+  background-image: linear-gradient(to right,/*#800080,*/ #ee9ca7 , #ffdde1);
 
 
   font-synthesis: none;
@@ -47,13 +47,13 @@ body {
   .white_bar {
     width: 100%;
     height: 2.5px;
-    background-color: rgba(158, 188, 158, 0.495);
+    background-color: rgba(69, 55, 180, 0.495);
   }
 
   .search {
     border-collapse: initial;
     color: rgba(188, 75, 81);
-    border-color: rgba(158, 188, 158, 0.495);
+    border-color: rgba(69, 55, 180, 0.495);
     border-radius: 30px;
     border-width: 2px;
     border-style: solid;
@@ -66,7 +66,7 @@ body {
     flex-direction: column;
     border-radius: 30px;
     border-style: solid;
-    border-color: rgba(158, 188, 158, 0.495);
+    border-color: rgba(69, 55, 180, 0.495);
     border-collapse: initial;
     border-width: 2px;
     border-style: solid;
@@ -75,7 +75,7 @@ body {
     height: 100%;
     padding: 1em;
     margin-bottom: 1em;
-    background-image: linear-gradient(to right, #84d4ff,#f2fcfe)
+    background-image: linear-gradient(to right, #77e6fa89,#f2fcfe)
   }
 
   .character_img{
@@ -149,13 +149,13 @@ body {
 .white_bar {
   width: 100%;
   height: 2.5px;
-  background-color: rgba(158, 188, 158, 0.495);
+  background-color: rgba(69, 55, 180, 0.495);
 }
 
 .search {
   border-collapse: initial;
   color: rgba(188, 75, 81);
-  border-color: rgba(158, 188, 158, 0.495);
+  border-color: rgba(69, 55, 180, 0.495);
   border-radius: 30px;
   border-width: 2px;
   border-style: solid;
@@ -168,7 +168,7 @@ body {
   flex-direction: column;
   border-radius: 30px;
   border-style: solid;
-  border-color: rgba(158, 188, 158, 0.495);
+  border-color: rgba(69, 55, 180, 0.495);
   border-collapse: initial;
   border-width: 2px;
   border-style: solid;
@@ -177,7 +177,7 @@ body {
   height: 100%;
   padding: 1em;
   margin-bottom: 1em;
-  background-image: linear-gradient(to left, #84d4ff,#f2fcfe)
+  background-image: linear-gradient(to left, #77e6fa89,#f2fcfe)
 }
 
 .character_img{
@@ -226,13 +226,13 @@ body {
   .white_bar {
     width: 100%;
     height: 2.5px;
-    background-color: rgba(158, 188, 158, 0.495);
+    background-color: rgba(69, 55, 180, 0.495);
   }
   
   .search {
     border-collapse: initial;
     color: rgba(188, 75, 81);
-    border-color: rgba(158, 188, 158, 0.495);
+    border-color: rgba(69, 55, 180, 0.495);
     border-radius: 30px;
     border-width: 2px;
     border-style: solid;
@@ -245,7 +245,7 @@ body {
     flex-direction: column;
     border-radius: 30px;
     border-style: solid;
-    border-color: rgba(158, 188, 158, 0.495);
+    border-color: rgba(69, 55, 180, 0.495);
     border-collapse: initial;
     border-width: 2px;
     border-style: solid;
@@ -254,7 +254,7 @@ body {
     height: 100%;
     padding: 1em;
     margin-bottom: 1em;
-    background-image: linear-gradient(#84d4ff,#f2fcfe)
+    background-image: linear-gradient(#77e6fa89,#f2fcfe)
 
   }
   
