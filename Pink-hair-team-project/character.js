@@ -56,6 +56,14 @@ async function displayCharacterAsync() {
             }
         }
     });
+
+//  Adding the delete button on the character card
+    let modButton = document.createElement('a');
+    card.appendChild(modButton);
+    modButton.textContent = "Modify";
+    modButton.classList.add("character_buttons");
+    modButton.classList.add("modify_button");
+    modButton.href = `../modify.html`;
 }
 
 displayCharacterAsync();
