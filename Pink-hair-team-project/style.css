@@ -11,7 +11,7 @@
   color-scheme: light dark;
   /*color: rgba(255, 255, 255, 0.87);*/
   color: rgba(188, 75, 81);
- /* background-color: rgba(255, 207, 210, 0.952);*/
+/* background-color: rgba(255, 207, 210, 0.952);*/
   background-image: linear-gradient(to right,/*#800080,*/ #ee9ca7 , #ffdde1);
 
 
@@ -31,9 +31,12 @@ a:hover {
   color: #535bf2;
 }
 
+.white_bar {
+  margin: 10px 0px;
+}
+
 body {
   margin: 0;
-  
   min-width: 320px;
   min-height: 100vh;
 }
