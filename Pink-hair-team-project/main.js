@@ -59,18 +59,11 @@ async function displayAllCharacters () {
           if (result) {
             console.log("deleted, yes!");
             await axios.delete(`https://character-database.becode.xyz/characters/${elem.id}`);
+            window.location.replace("./index.html");
           }
       }
     });
   }
-
-// Button to add a new character
-//   let addButton = document.createElement('a');
-//   let article = document.querySelector('article');
-//   article.appendChild(addButton);
-//   addButton.href = `../input.html`;
-//   addButton.classList.add("addition_button");
-//   addButton.textContent = "+";
 }
 
 displayAllCharacters();
