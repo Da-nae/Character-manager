@@ -46,6 +46,15 @@ body {
   flex-direction: column;
 }
 
+.character_buttons{
+  text-align: center;
+}
+
+.addition_button:hover {
+  color: rgb(111, 44, 47);
+  border-color: rgb(111, 44, 47);
+}
+
 @media screen and (max-width: 411px) {
     h1  {
       font-size: 200%;
