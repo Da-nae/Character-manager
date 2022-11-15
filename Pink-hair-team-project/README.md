@@ -1,11 +1,11 @@
 # Character Manager
 **Third group project initiated by Becode.**
 
-Link of the finished project : [here](https://da-nae.github.io/).
+Link of the finished project : [here](https://graceful-maamoul-64162a.netlify.app).
 
 ## **Who did this project ?**
 
-Team members : [Kimberley](https://github.com/) et [Danaé](https://github.com/Da-nae).
+Team members : [Kimberley](https://github.com/Kimberley16) et [Danaé](https://github.com/Da-nae).
 
 ## **Who took what part ?**
 
@@ -23,9 +23,9 @@ HTML, CSS and Javascript.
 ## **What the easiest part ?**
 
 - Kimberley : 
-- Danaé : 
+- Danaé : The first step in Javascript which was to display a database. It was very fun to make !
 
 ## **What the hardest part ?**
 
-- Aurélie : 
-- Danaé :  
+- Kimberley : 
+- Danaé : Getting to know the new tools like Vite (and how to deploy with it) and Tailwind.
