@@ -40,24 +40,6 @@ async function displayCharacterAsync() {
         infoLong.classList.add("character_description");
 
 //  Adding the delete button on the character card
-    let delButton = document.createElement('a');
-    card.appendChild(delButton);
-    delButton.textContent = "Delete";
-    delButton.classList.add("character_buttons");
-    delButton.classList.add("delete_button");
-
-    delButton.addEventListener("click", async(e) => {
-        if(e.target.classList[1] == "delete_button"){
-            const result = confirm("Are you sure you want to delete this character ?");
-            if (result) {
-                await axios.delete(`https://character-database.becode.xyz/characters/${singleCharacter.id}`);
-                alert('Character has been successfully deleted'); 
-                window.location.replace("./index.html");
-            }
-        }
-    });
-
-//  Adding the delete button on the character card
     let modButton = document.createElement('a');
     card.appendChild(modButton);
     modButton.textContent = "Modify";
@@ -65,5 +47,23 @@ async function displayCharacterAsync() {
     modButton.classList.add("modify_button");
     modButton.href = `../modify.html?id=${value}`;
 }
+
+//  Adding the delete button on the character card
+let delButton = document.createElement('a');
+card.appendChild(delButton);
+delButton.textContent = "Delete";
+delButton.classList.add("character_buttons");
+delButton.classList.add("delete_button");
+
+delButton.addEventListener("click", async(e) => {
+    if(e.target.classList[1] == "delete_button"){
+        const result = confirm("Are you sure you want to delete this character ?");
+        if (result) {
+            await axios.delete(`https://character-database.becode.xyz/characters/${singleCharacter.id}`);
+            alert('Character has been successfully deleted'); 
+            window.location.replace("./index.html");
+        }
+    }
+});
 
 displayCharacterAsync();
