@@ -40,7 +40,17 @@ body {
 
 @media screen and (max-width: 411px) {
     h1  {
-      font-size: 150%;
+      font-size: 200%;
+      background: linear-gradient(to right, #800080, #ffc0cb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        font-style: oblique;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 2px;
+    }
       
     }
 
@@ -56,8 +66,13 @@ body {
     border-color: rgba(69, 55, 180, 0.495);
     border-radius: 30px;
     border-width: 2px;
-    border-style: solid;
+    border-style: none;
     margin: 1px;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+    
+  
   }
 
   .character{
@@ -84,12 +99,8 @@ body {
     border-radius: 50px;
   }
 
-  .character_name{
-
-  }
-
   .character_infos{
-    margin-bottom: 1em;
+   
     font-size: 80%;
   }
 
@@ -97,9 +108,6 @@ body {
     margin-bottom: 1em;
     border-collapse: initial;
     color: white;
-    /* background-color: $darkBackground;
-    border-color: $globalFontColor;
-    font-family: $paragraphs-font; */
     border-radius: 30px;
     border-width: 1px;
     border-style: solid;
@@ -109,26 +117,23 @@ body {
   /* button{
     border-collapse: initial;
     color: white;
-    /* background-color: $darkBackground;
-    border-color: $globalFontColor;
-    font-family: $paragraphs-font; 
     border-radius: 30px;
     border-width: 1px;
     border-style: solid;
     margin: 1px;
   } */
 
-}
+
 .addition_button{
   border-collapse: initial;
-  color: white;
-  /* background-color: $darkBackground;
-  border-color: $globalFontColor;
-  font-family: $paragraphs-font; */
+  color: rgba(188, 75, 81);
   border-radius: 30px;
   border-width: 1px;
   border-style: solid;
   margin: 1px;
+  position: absolute ;
+  left: 280px;
+  top: 80px;
 }
 .more {
   margin-bottom: 2em;
@@ -142,7 +147,16 @@ body {
     
   }
   h1  {
-    font-size: 150%;
+    font-size: 250%;
+    background: linear-gradient(to right, #800080, #ffc0cb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-style: oblique;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      letter-spacing: 2px;
     
   }
 
@@ -158,8 +172,10 @@ body {
   border-color: rgba(69, 55, 180, 0.495);
   border-radius: 30px;
   border-width: 2px;
-  border-style: solid;
+  border-style: none;
   margin: 1px;
+  letter-spacing: 5px;
+  font-size: 120%;
 }
 
 .character{
@@ -199,9 +215,6 @@ body {
   margin-bottom: 1em;
   border-collapse: initial;
   color: white;
-  /* background-color: $darkBackground;
-  border-color: $globalFontColor;
-  font-family: $paragraphs-font; */
   border-radius: 30px;
   border-width: 1px;
   border-style: solid;
@@ -219,7 +232,16 @@ body {
       
     }
     h1  {
-      font-size: 150%;
+      font-size: 300%;
+      background: linear-gradient(to right, #800080, #ffc0cb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        font-style: oblique;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 2px;
       
     }
   
@@ -235,8 +257,10 @@ body {
     border-color: rgba(69, 55, 180, 0.495);
     border-radius: 30px;
     border-width: 2px;
-    border-style: solid;
+    border-style: none;
     margin: 1px;
+    letter-spacing: 5px;
+    font-size: 150%;
   }
   
   .character{
@@ -277,9 +301,7 @@ body {
     margin-bottom: 1em;
     border-collapse: initial;
     color: white;
-    /* background-color: $darkBackground;
-    border-color: $globalFontColor;
-    font-family: $paragraphs-font; */
+
     border-radius: 30px;
     border-width: 1px;
     border-style: solid;
