@@ -65,12 +65,12 @@ async function displayAllCharacters () {
   }
 
 // Button to add a new character
-  let addButton = document.createElement('a');
-  let article = document.querySelector('article');
-  article.appendChild(addButton);
-  addButton.href = `../input.html`;
-  addButton.classList.add("addition_button");
-  addButton.textContent = "+";
+//   let addButton = document.createElement('a');
+//   let article = document.querySelector('article');
+//   article.appendChild(addButton);
+//   addButton.href = `../input.html`;
+//   addButton.classList.add("addition_button");
+//   addButton.textContent = "+";
 }
 
 displayAllCharacters();
