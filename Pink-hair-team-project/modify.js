@@ -42,6 +42,10 @@ async function inputCharacterAsync() {
     if(document.querySelector("input[type=file]").files.length === 0) {
         const urlParams = new URLSearchParams(window.location.search);
         const value = urlParams.get('id');
+
+        const resp = await axios.get(`https://character-database.becode.xyz/characters/${value}`);
+        let singleCharacter = resp.data;
+
         let characterName = document.querySelector('#characterName').value;
         let shortDescription = document.querySelector('#shortDescription').value;
         let Description = document.querySelector('#Description').value;
@@ -50,6 +54,7 @@ async function inputCharacterAsync() {
                 name: characterName, 
                 shortDescription: shortDescription,
                 description: Description,
+                image: singleCharacter.image
             };
         
             let response = await axios.put(`https://character-database.becode.xyz/characters/${value}`, updatedChar);
