@@ -22,10 +22,10 @@ HTML, CSS and Javascript.
 
 ## **What the easiest part ?**
 
-- Kimberley : 
+- Kimberley : the design was so fun to make!
 - Danaé : The first step in Javascript which was to display a database. It was very fun to make !
 
 ## **What the hardest part ?**
 
-- Kimberley : 
+- Kimberley : It was hard at first to use vite.
 - Danaé : Getting to know the new tools like Vite (and how to deploy with it) and Tailwind.
